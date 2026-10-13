@@ -14,11 +14,11 @@ body {
 }
 
 .card {
-  position: relative; /* gli elementi "absolute" all'interno si posizionano rispetto a lei */
+  position: relative;
   width: 250px;
   height: 340px;
   border-radius: 16px;
-  overflow: hidden; /* taglia tutto ciò che esce dai bordi */
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -26,7 +26,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* riempie la card senza deformare la foto */
+  object-fit: cover;
   transition: filter 0.3s ease;
 }
 
@@ -37,13 +37,13 @@ body {
   padding: 12px 16px;
   border: none;
   border-radius: 24px;
-  background-color: #e60023; /* rosso Pinterest */
+  background-color: #e60023;
   color: white;
-  font-family: inherit; /* i button non ereditano il font da soli */
+  font-family: inherit;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transform: translateY(-80px); /* parte sopra la card, fuori vista */
+  transform: translateY(-80px);
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
@@ -55,9 +55,9 @@ body {
   right: 12px;
   bottom: 12px;
   display: flex;
-  justify-content: space-between; /* link a sinistra, icone a destra */
+  justify-content: space-between;
   align-items: center;
-  transform: translateY(80px); /* parte sotto la card, fuori vista */
+  transform: translateY(80px);
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
@@ -72,14 +72,14 @@ body {
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
-  white-space: nowrap; /* tutto su una riga */
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* aggiunge "..." se il testo è troppo lungo */
+  text-overflow: ellipsis;
 }
 
 .link i {
   margin-right: 4px;
-  transform: rotate(45deg); /* la freccia diventa diagonale ↗ */
+  transform: rotate(45deg);
 }
 
 .icons {
@@ -91,31 +91,28 @@ body {
   width: 32px;
   height: 32px;
   border: none;
-  border-radius: 50%; /* cerchio */
+  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
 }
 
-/* Nascosti di default */
 .save-btn,
 .bottom-bar {
   opacity: 0;
 }
 
-/* Visibili quando il mouse è sulla card */
 .card:hover .save-btn,
 .card:hover .bottom-bar {
   opacity: 1;
-  transform: translateY(0); /* tornano al loro posto */
+  transform: translateY(0);
 }
 
-/* Foto più scura in hover */
 .card:hover img {
   filter: brightness(70%);
 }
 
 .save-btn:hover {
-  background-color: #ad081b; /* rosso più scuro */
+  background-color: #ad081b;
 }
 
 .icon-btn:hover,
